@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+// import App from '../App.css'
 
-
-function Signup(login) {
+function Signup() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -11,7 +11,7 @@ function Signup(login) {
     }
 
     return (
-        <div className="container mt-5" style={{maxWidth:'500px'}}>
+        <div className="login container mt-5" style={{maxWidth:'500px'}}>
             <h3>Please Signup !!</h3>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="container mt-3">
@@ -24,7 +24,7 @@ function Signup(login) {
                     <label for="exampleFormControlInput1" class="form-label m-2">Password</label>
                     <input type="password" class="form-control" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <button type="submit" className="btn mt-3 btn-primary">Signup</button>
+                <button type="submit" className="btn mt-3 btn-primary">SignUP</button>
             </form>
 
         </div>

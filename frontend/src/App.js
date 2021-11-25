@@ -4,14 +4,15 @@ import {BrowserRouter} from 'react-router-dom'
 import { Routes ,Route } from 'react-router-dom';
 import Signup from './components/Signup';
 import Login from './components/Login';
-import Notes from './components/Notes';
+import Home from './components/Home';
+// import Notes from './components/Notes';
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route exact path = "/" element={<Notes/>}/>
+        <Route exact path = "/" element={<Home/>}/>
         <Route exact path = "/login" element={<Login/>}/>
         <Route exact path = "/signup" element={<Signup/>}/>
       </Routes>

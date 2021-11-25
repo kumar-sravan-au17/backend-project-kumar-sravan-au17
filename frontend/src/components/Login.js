@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router';
+// import { Navigate } from 'react-router';
 import {  useNavigate } from 'react-router-dom'
+import App from '../App.css'
 
 
 function Login() {
@@ -10,11 +11,11 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email, password);
-        navigate("/")
+        // navigate("/")
     }
 
     return (
-        <div className=" container mt-5" style={{ maxWidth: '500px' }}>
+        <div className="login container mt-5" style={{ maxWidth: '500px' }}>
             {/* {true && <Navigate to="/"/>} */}
             <h3>Please Login!!</h3>
             <form onSubmit={(e) => handleSubmit(e)}>
