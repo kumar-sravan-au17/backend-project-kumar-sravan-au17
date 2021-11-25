@@ -1,3 +1,60 @@
-.App {
+body{
+  box-sizing: border-box;
+  /* background-image: url(https://image.freepik.com/free-vector/winter-blue-pink-gradient-background-vector_53876-117276.jpg); */
+  background-size: cover;
+  background-image: url(./background1.jpg);
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: auto;
+  padding: 20px;
+  padding-top: 120px;
+}
+
+h1{
+  font-size: 50px;
   text-align: center;
+  margin-top: 180px;
+  color:rgb(44, 105, 219);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3{
+  color:rgb(5, 60, 94);
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: -31px;
+}
+
+.login2{
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 120px; */
+  padding-top: 29px;
+
+}
+
+h3{
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+
+}
+
+.login3{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
 }
