@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import AddNote from "./AddNote"
@@ -38,3 +39,4 @@ function Main() {
 }
 
 export default Main
+
