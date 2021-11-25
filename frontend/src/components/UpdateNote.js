@@ -1,11 +1,11 @@
 import axios from "axios"
 import { useState } from "react"
 
-function AddNote(props) {
+function UpdateNote(props) {
 
-    const [title, setTitle] = useState("")
-    const [noteContent, setNoteContent] = useState("")
-    const [category, setCategory] = useState("")
+    const [title, setTitle] = useState(props.data.title || "")
+    const [noteContent, setNoteContent] = useState(props.data.content || "")
+    const [category, setCategory] = useState(props.data.category || "")
 
     const handleTitleChange = (e) => {
         setTitle(e.target.value)
@@ -17,19 +17,17 @@ function AddNote(props) {
         setCategory(e.target.value)
     }
     const handleClose = () => {
-        props.closeAddFrom(false)
+        props.closeFn(false)
     }
     
     const handleSubmit = async () => {
-        const newNote = {
+        axios.patch(`/api/notes/${props.data._id}`, {
             title: title,
             content: noteContent,
             category: category
-        }
-        await axios.post('/api/notes', newNote )
-        props.closeAddFrom(false)
+        })
+        props.closeFn(false)
         props.onNotesUpdate()
-        
     }
 
     return(
@@ -46,10 +44,10 @@ function AddNote(props) {
                 <label htmlFor="exampleFormControlInput1" className="form-label">Category</label>
                 <input onChange={handleCategoryChange} value={category} type="text" className="form-control" id="exampleFormControlInput1"/>
             </div>
-            <button onClick={handleSubmit} className="btn btn-info">Add Note</button>
+            <button onClick={handleSubmit} className="btn btn-info">Update</button>
             <button onClick={handleClose} className="btn btn-danger mx-3">Close</button>
         </div>
     )
 }
 
-export default AddNote
+export default UpdateNote

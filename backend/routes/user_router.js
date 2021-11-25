@@ -2,10 +2,6 @@ const { Router } = require('express')
 const user_model = require('../models/user_model')
 const userRoutes = Router()
 
-// const morgan = require('morgan')
-
-// userRoutes.use(morgan('dev'))
-
 userRoutes.get('/user', async (req, res) => {
     try {
         const data = await user_model.find()
@@ -30,7 +26,6 @@ userRoutes.post('/user', async (req, res) => {
         })
     }
 })
-
 
 userRoutes.get('/user/:id', async (req, res) => {
     try {

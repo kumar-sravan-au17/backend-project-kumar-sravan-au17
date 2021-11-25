@@ -1,10 +1,6 @@
 const { Router } = require('express')
 const note_model = require('../models/notes_model')
-// const morgan = require('morgan')
 const noteRoutes = Router()
-
-// noteRoutes.use(morgan('dev'))
-
 
 noteRoutes.get('/notes', async (req, res) => {
     try {
@@ -58,8 +54,9 @@ noteRoutes.delete('/notes/:id', async (req, res) => {
 
 noteRoutes.patch('/notes/:id', async (req, res) => {
     try {
-        const data = await note_model.findByIdAndUpdate(req.params.id)
-        res.send(data)
+        const data = req.body
+        const inserted = await note_model.findByIdAndUpdate(req.params.id, data)
+        res.send(inserted)
     } catch (error) {
         res.send({
             error: true,
