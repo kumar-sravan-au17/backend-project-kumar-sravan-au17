@@ -22,11 +22,11 @@ function Notes(props) {
     }
 
     return(
-        <div className="card w-50 mb-3" key={props.data._id}>
+        <div style={{width: "20em"}} className="card col-4 overflow-auto" key={props.data._id}>
             <div className="card-header">
                 {props.data.title}
             </div>
-            <div className="card-body bg-warning bg-opacity-25">
+            <div className="card-body bg-warning bg-opacity-25 ">
                 <p className="card-text">{props.data.content}</p>
                 <div className="float-end">
                     <button onClick={handleEdit} className="btn btn-primary mx-3">Edit</button>

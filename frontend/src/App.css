@@ -1,8 +1,8 @@
-body{
+body  {
   box-sizing: border-box;
-  /* background-image: url(https://image.freepik.com/free-vector/winter-blue-pink-gradient-background-vector_53876-117276.jpg); */
   background-size: cover;
-  background-image: url(./background1.jpg);
+  /* background-image: url(./background1.jpg); */
+  background-color: rgb(255, 253, 230);
 }
 .login {
   display: flex;
@@ -16,8 +16,8 @@ body{
 h1{
   font-size: 50px;
   text-align: center;
-  margin-top: 180px;
   color:rgb(44, 105, 219);
+  margin-top: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -57,4 +57,10 @@ h3{
   padding: 100px;
   justify-content: center;
   align-items: center;
+}
+
+.row{
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
 }
