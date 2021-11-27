@@ -30,7 +30,6 @@ function Signup() {
             email : email,
             password : password
         }
-        // console.log(userData);
         handlePost(userData)
 
     }

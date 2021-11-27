@@ -2,9 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
-
+    
     const navigate = useNavigate()
     const handleLogout = async () => {
+        document.cookie = "auth-token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         navigate('/')
     }
 
