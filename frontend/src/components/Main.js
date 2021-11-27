@@ -16,7 +16,6 @@ function Main() {
 
     const pullNotes = async () => {
         const response = await axios.get(`/api/notes/${user}`)
-        console.log(response);
         setNotes(response.data)
     }
 

@@ -3,10 +3,10 @@ const note_model = require('../models/notes_model')
 const noteRoutes = Router()
 const verify = require('../verifyToken')
 
+// Using middleware to verify jwt token
 noteRoutes.use(verify)
 
 noteRoutes.get('/', async (req, res) => {
-    console.log('Hitting Note Get');
     try {
         const data = await note_model.find()
         res.send(data)
@@ -20,7 +20,6 @@ noteRoutes.get('/', async (req, res) => {
 
 noteRoutes.post('/', async (req, res) => {
     console.log(req.user._id);
-    console.log("Hit the note post route");
     try {
         const data = {
             user: req.user._id,

@@ -22,10 +22,8 @@ function Login() {
 
         try {
             const response = await axios.post('/api/login', data)
-            // console.log(response.data.user);
             const token = response.data.token
             if (token) {
-                // localStorage.setItem('auth-token',token)
                 setUserId(response.data.user)
                 setLoggedIn(true)
             }

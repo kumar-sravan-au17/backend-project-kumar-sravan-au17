@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken')
 
 function auth (req, res, next) {
-    console.log();
     const token = req.cookies["auth-token"]
     if (!token) {
         return res.status(401).send('Needs to be logged in to access this route!')
